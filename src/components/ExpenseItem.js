@@ -4,7 +4,7 @@ import './ExpenseItem.css'
 import { useState } from 'react';
 
 let ExpenseItem = (props) => {
-    let [input, setInput] = useState("hi");
+    let [input, setInput] = useState("");
     let inp = (event) => {
         setInput(event.target.value);
     }
@@ -12,6 +12,8 @@ let ExpenseItem = (props) => {
     let but = () => {
          setTitle(input);
     }
+
+    /*getElementByClass('but').onClick.setTitle(input);*/
     return (
       <Card className='expense-item'>
       <ExpenseDate  date = {props.date}/>
