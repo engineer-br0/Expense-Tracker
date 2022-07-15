@@ -1,5 +1,5 @@
 
-function Card(props){
+var Card = (props) => {
     return <div className={props.className}>{props.children}</div>
 }
 

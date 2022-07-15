@@ -8,6 +8,7 @@
     color: rgb(165, 61, 42);
     font-size: x-large;
     display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -28,3 +29,7 @@
     padding: 10px;
     margin-right: 10px;
 }
+
+    .but{
+margin-right: 10px;
+    }

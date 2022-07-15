@@ -1,7 +1,7 @@
 import "./App.css"
 import Expenses from "./components/Expenses"
 
-function App(){
+const App = () => {
   var arr = [
     {
        date : new Date(2022, 7, 13),
