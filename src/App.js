@@ -1,5 +1,6 @@
 import "./App.css"
 import Expenses from "./components/Expenses"
+import NewExpense from "./components/NewExpense";
 
 const App = () => {
   var arr = [
@@ -38,6 +39,7 @@ const App = () => {
     return(
       <div>
         <h1 className="ex">Expense Tracker</h1>
+        <NewExpense></NewExpense>
         <Expenses arr ={arr}/>
       </div>
     )
