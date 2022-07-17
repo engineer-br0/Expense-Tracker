@@ -9,19 +9,6 @@ let NewExpense = (props) =>{
     let [title , setTitle ] = useState("");
     let [amount , setAmount ] = useState("");
 
-    let clickFunc = (event ) => {
-        event.preventDefault();
-        var obj ={
-            title : title,
-            date : new Date(date),
-            price : amount
-        }
-        props.recFunc(obj);
-        setDate('');
-        setTitle('');
-        setAmount('');
-    }
-
     let dateFunc = (event) =>{
          setDate(event.target.value);
     }
@@ -31,6 +18,20 @@ let NewExpense = (props) =>{
    let amountFunc = (event) =>{
         setAmount(event.target.value);
    }
+
+
+   let clickFunc = (event) => {
+    event.preventDefault();
+    var obj ={
+        title : title,
+        date : new Date(date),
+        price : amount
+    }
+    props.recFunc(obj);
+    setDate('');
+    setTitle('');
+    setAmount('');
+}
 
     return(
         <form onSubmit={clickFunc}>
