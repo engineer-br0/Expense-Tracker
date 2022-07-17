@@ -40,7 +40,7 @@ const App = () => {
     let [ARR, setARR] = useState(arr);
 
   let recieve = (obj) => {
-        let newARR = [obj, ...arr];
+        let newARR = [obj, ...ARR];
         setARR(newARR);
   };
     return(
