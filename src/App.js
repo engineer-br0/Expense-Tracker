@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css"
 import Expenses from "./components/Expenses"
 import NewExpense from "./components/NewExpense";
@@ -36,11 +37,17 @@ const App = () => {
     }
   ];
   
+    let [ARR, setARR] = useState(arr);
+
+  let recieve = (obj) => {
+        let newARR = [obj, ...arr];
+        setARR(newARR);
+  };
     return(
       <div>
         <h1 className="ex">Expense Tracker</h1>
-        <NewExpense></NewExpense>
-        <Expenses arr ={arr}/>
+        <NewExpense recFunc = {recieve}></NewExpense>
+        <Expenses arr ={ARR}/>
       </div>
     )
 }
